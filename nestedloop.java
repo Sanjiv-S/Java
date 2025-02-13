@@ -57,7 +57,8 @@ public class nestedloop {
                 System.out.print(" ");
             }                                                                                                                                                                                                                                       
             q++;
-        }
+        }                                                                                                                                                                                                                  
+
     }
 }
 
