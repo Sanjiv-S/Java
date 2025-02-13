@@ -42,7 +42,22 @@ public class nestedloop {
             }
             System.out.println();
         }
-        
+        int q =0;
+        int l;
+        int n2 =4;
+        for(i=1;i<=n2;i++){
+            System.out.println(" ");
+            for(j=n2-i;j>=1;j--){
+                System.out.print(" ");
+            }
+            for(k=1;k<=i+q;k++){
+                System.out.print("1");
+            }
+            for(l=n2-i;l>=1;l--){
+                System.out.print(" ");
+            }                                                                                                                                                                                                                                       
+            q++;
+        }
     }
 }
 
