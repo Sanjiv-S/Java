@@ -63,7 +63,6 @@ public class array {
         }
         
     }
-
     public static void main(String args[]){
         array obj =new array();
         int arr[]={1,2,3,4,5};
