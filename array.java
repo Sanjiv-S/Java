@@ -36,13 +36,32 @@ public class array {
             }
         }
         System.out.println("Second largest is:"+sec_max);
-        int value =arr[0];
-        int arr1[]={2,5,1,3,4};
-        for(int i=0;i<arr1.length;i++){
-            for(int j=0;j<arr1.length;j++){
-                arr1[i]<
+    }
+    public void consecutive_num(){
+        int arr[]= {1,1,0,1,1,0,0,1,0,1,1,1,1};
+        int prev= 0;
+        int count=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==1){
+                count++;
+            }
+            else if(arr[i]==0){
+                if(prev<=count){
+                    prev = count;
+                }
+                count=0;
+            }
+            else{
+                System.out.println("no such value");
             }
         }
+        if(prev>=count){
+            System.out.println("num of consecutive one's:"+prev);
+        }
+        else{
+            System.out.println("num of consecutive one's:"+count);
+        }
+        
     }
 
     public static void main(String args[]){
@@ -70,5 +89,6 @@ public class array {
         System.out.println("");
         obj.max_arr();
         obj.sec_largest();
+        obj.consecutive_num();
     }
 }
