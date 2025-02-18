@@ -48,10 +48,25 @@ public record pattern() {
             System.out.println("");
         }
     }
+    public void x_pattern(){
+        int n=4;
+        for(int i=0;i<=n;i++){
+            for(int j=i;j<=n-i;j++){
+                if(i==j ||i==n-i){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+        }
+    }
     public static void main (String args[]){
        pattern pat = new pattern();
        pat.zero_pyramid();
        System.out.println("");
        pat.num_pyramid();
+       System.out.println("");
+       pat.x_pattern();
     }
 }
