@@ -2,7 +2,7 @@ public class sub_array {
     
     public static void main(String args[]){
         int A[]={1,1,1,0,1,1,0,1,1,0,1,1};
-        int B[]={1,1,0,0};
+        int B[]={1,1,1,0};
         int value=1;
         int n=A.length;
         int m=B.length;
