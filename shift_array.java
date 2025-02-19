@@ -3,7 +3,7 @@ public class shift_array {
         int i=0;
         int A[]={10,20,5,1,3,2};
         int n=A.length;
-        int num =3;
+        int num =4;
         int count=1;
         while(count<=num){
             int temp=A[n-1];
