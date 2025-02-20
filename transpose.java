@@ -26,20 +26,38 @@ public class transpose {
             {7,8,9}
         };
         int n =arr.length;
-        int c[]=new int[5];
+        int c[]=new int[(n * (n - 1)) / 2];
+        int d[]=new int[(n * (n - 1)) / 2];
         int k=0;
         int sum=0;
+        int sum1=0;
         for(int i=1;i<n;i++){
             for(int j=0;j<i;j++){
                     c[k]=arr[i][j];
                     k++;
                     }    
                 }
+        for(int i=1;i<n;i++){
+            for(int j=0;j<i;j++){
+                    d[k]=arr[j][i];
+                    k++;
+                    }    
+                }
         for (int i = 0; i < k; i++) {
             sum += c[i];
         }
-        System.out.print(sum);
+        for (int i = 0; i < k; i++) {
+            sum1 += d[i];
+        }
+        arr[0][0]=sum1;
+        arr[2][2]=sum;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
     }
+}
     public static void main(String args[]){
         transpose obj =new transpose();
         obj.transpose_array();
