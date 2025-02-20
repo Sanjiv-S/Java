@@ -1,6 +1,6 @@
 public class transpose {
     public void transpose_array(){
-        int arr[][]={{1,2,3,5},{4,5,6,11},{7,8,9,22},{66,78,9,54}};
+        int arr[][]={{1,2,3,5},{4,5,6,11},{7,8,9,22},{66,78,9,5}};
         int row_start=0;
         int col_start=0;
         int row_end=arr.length;
