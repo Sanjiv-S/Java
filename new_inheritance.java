@@ -18,6 +18,7 @@ public class new_inheritance {
         obj.sum1();
         obj.sum2();
 
+        
      }
 }
 class second extends new_inheritance{
