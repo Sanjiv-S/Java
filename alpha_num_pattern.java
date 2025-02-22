@@ -53,9 +53,7 @@ public class alpha_num_pattern {
                 if(i<8){
                     System.out.println();
                 }
-                
             }
-            
         }
     }
     public static void main(String args[]){
