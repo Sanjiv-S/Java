@@ -11,15 +11,13 @@ public class new_inheritance {
         y = sc.nextInt();
         z=x+y;
         System.out.println(z);
-
     }
     public static void main(String args[]){
         third obj =new third();
         obj.sum();
         obj.sum1();
         obj.sum2();
- 
- 
+
      }
 }
 class second extends new_inheritance{
