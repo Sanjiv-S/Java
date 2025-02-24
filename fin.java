@@ -9,12 +9,16 @@ abstract class sub {
         System.out.println(a);
     }
 }
-class fin extends sub{
+final class fin extends sub{
+    static void meth(){
+        System.out.println("Hello");
+    }
     public static void main(String[] args) {
         fin obj = new fin();
         System.out.println(obj.PI);
         initialization();
+        meth();
     }
 }
-   
+
 
