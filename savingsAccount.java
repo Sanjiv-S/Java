@@ -4,6 +4,7 @@ abstract class BankAccount{
     private int balance;
     static int interest_rate;
     abstract void calculateinterest();
+
 }
 class currentAccount extends BankAccount{
     Scanner sc =new Scanner(System.in);
