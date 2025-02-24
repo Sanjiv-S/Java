@@ -11,7 +11,7 @@ class area_circle extends abstract_class{
         System.out.print("Enter a value:");
         r=in.nextDouble();
     }
-    void calc_area(){
+    protected void calc_area(){
         area =3.14*r*r;
     System.out.println("Area="+area);
     }
