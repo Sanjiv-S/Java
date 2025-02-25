@@ -1,15 +1,15 @@
 
-interface testinterface {
+interface test {
   
     final int a = 10;
     void display();
 }
-class TestClass implements testinterface {
+class TestClass implements test {
     public void display(){ 
       System.out.println("Hello!"); 
     }
 }
-class Geeks
+class testinterface 
 {
     public static void main(String[] args){
         TestClass t = new TestClass();
