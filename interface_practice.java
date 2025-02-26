@@ -21,8 +21,6 @@ public class interface_practice implements second{
     public void sec_method(){
         System.out.println("inside abstract method");
     }
-    
-
     public static void main(String args[]){
         interface_practice obj=new interface_practice();
         first.fir_method();
