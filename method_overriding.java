@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class method_overriding {
+    static Scanner sc =new Scanner(System.in);
     protected int area;
     protected double pi =3.14;
     public void calculate_area(){
@@ -15,7 +16,7 @@ public class method_overriding {
 class circle extends method_overriding{
     private double r;
     public void calculate_area(){
-        Scanner sc =new Scanner(System.in);
+       
         System.out.print("Enter the value:");
         r= sc.nextInt();
         double area =pi*r*r;
@@ -24,7 +25,7 @@ class circle extends method_overriding{
 }
 class square extends method_overriding{
     public void calculate_area(){
-        Scanner sc =new Scanner(System.in);
+       
         System.out.print("Enter the value:");
         int s= sc.nextInt();
         double area =s*s;
