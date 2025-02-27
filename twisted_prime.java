@@ -1,6 +1,7 @@
 public class twisted_prime {
     public static int count=1;
     static int calc_prime(int number){
+        if(number<2) return 1;
         for(int i=2;i*i<=number;i++){
             if(number %i==0){
                 return 1;
@@ -36,5 +37,4 @@ public class twisted_prime {
     public static void main(String args[]){
         prime(11934);
     }
-
 }

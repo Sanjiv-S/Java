@@ -8,17 +8,25 @@ public class circular_prime {
         }
         return count;
     }
-    static void prime(){
-        int n=1193;
+    static int count(int n){
+        int count=1;
+        while(n/10!=0){
+            n=n/10;
+            count++;
+        }
+        return count;
+    }
+    static void prime(int n){
+        
         int flag=0;
-            for(int i=2;i<n/2;i++){
+            for(int i=2;i*i<=n;i++){
                 if(n%i==0){
                     flag++;
                 }
             }
             if(flag==0){
-                int m=0;
-                while(m<3){
+                
+                for(int i=0;i<count(n);i++){
                 int rem=n%10;
                 int quo=n/10;
                 int new_value=rem*1000+quo;
@@ -30,7 +38,6 @@ public class circular_prime {
                     break;
                 }
                 n=new_value;
-                m++;
             }
             }
             else{
@@ -38,6 +45,6 @@ public class circular_prime {
             }
         }
     public static void main(String args[]){
-        prime();
+        prime(1193);
     }
 }
