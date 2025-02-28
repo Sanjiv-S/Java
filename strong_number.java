@@ -5,7 +5,6 @@ public class strong_number {
             value =value*i;
         }
         return value;
-        
     }
     static int split(int n,int sum){
         while(n>0){
@@ -16,13 +15,14 @@ public class strong_number {
         return sum;
     }
     public static void main(String args[]){
-        int number = 234;
-        int sumOfFactorials = split(number,0);
-        if(sumOfFactorials ==number){
-            System.out.print(sumOfFactorials+" is a strong number");
+        for(int i=1;i<=1000;i++){
+            int sumOfFactorials = split(i,0);
+            if(sumOfFactorials ==i){
+                System.out.println(i+" is a strong number");
+            }
         }
-        else{
+        /*else{
             System.out.print(sumOfFactorials+" is not a strong number");
-        }
+        }*/
     }
 }
