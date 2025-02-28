@@ -12,7 +12,10 @@ public class find_abundant {
         return value;
     }
     public static void main(String args[]){
-        int arr[][] ={{1234,4566,7890},{6543,8987,4567},{9654,9874,8523}};
+        int arr[][] ={
+            {12,4566,7890},
+            {6543,8987,4567},
+            {9654,9874,8523}};
         int count=0;
         for(int i=0;i<arr.length;i++){
             for(int j=0;j<arr.length;j++){
