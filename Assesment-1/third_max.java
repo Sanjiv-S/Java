@@ -30,7 +30,7 @@ public class third_max {
         return third;
     }
         public static void main(String args[]){
-            int arr[][]={{1,2,3,},{4,5,6},{7,8,9}};
+            int arr[][]={{1,2,3,},{4,5,6},{11,8,9}};
             int first_max=find_max(0,arr);
             int sec_max=second_max(first_max,arr,0);
             int thir_max=third_max(arr, sec_max, 0);
