@@ -1,6 +1,6 @@
 public class add_two_long {
     static void add(){
-        String num1="999999999999";
+        String num1="99999999999999";
         String num2="4444444";
         int carry=0;
         int sum=0;
