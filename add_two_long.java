@@ -1,7 +1,7 @@
 public class add_two_long {
     static void add(){
-        String num1="2345678783";
-        String num2="9765435";
+        String num1="999999999999";
+        String num2="4444444";
         int carry=0;
         int sum=0;
         int remainder=0;
@@ -13,7 +13,6 @@ public class add_two_long {
             num2 = "0" + num2;
         }
         for(int i=num1.length()-1;i>=0;i--){
-            
                 int digit1=num1.charAt(i)-'0';
                 int digit2=num2.charAt(i)-'0';
                 sum=digit1+digit2+carry;
@@ -28,7 +27,6 @@ public class add_two_long {
             }
             System.out.print(str);
         }
-
     public static void main(String args[]){
         add();
     }
