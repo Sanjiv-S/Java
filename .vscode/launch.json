@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ReverseSentence",
+            "request": "launch",
+            "mainClass": "ReverseSentence",
+            "projectName": "java_6903a146"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
