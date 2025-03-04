@@ -30,6 +30,8 @@ public class pallindrom {
         else{
             System.out.println("its not a pallindrom");
         }
+        String substring1 =str.substring(0,4);
+        System.out.println(substring1);
        
     }
     static void buffer_builtin(String str){
