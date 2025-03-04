@@ -1,4 +1,4 @@
-public class pallindrom {
+public class palindrome {
     static void Stringbuilder_builtin(String str){
         String rev =new StringBuilder(str).reverse().toString();
         if(rev.equals(str)){
