@@ -31,9 +31,24 @@ public class frequency {
             System.out.println(key + " -> " + freqMap.get(key));
         }
     }
+    static void convertbinary(){
+        int binary[] = new int[32];
+        int n=binary.length;
+        int index =0;
+        int num=12;
+        while(num>0){
+            binary[index++]=num%2;
+            num =num/2;
+        }
+        for(int i=n-1;i>=0;i--){
+            System.out.print(binary[i]);
+        }
+    }
     public static void main(String args[]){
        sort();
        System.out.println(); 
        freq();
+       System.out.println(); 
+       convertbinary();
     }
 }
