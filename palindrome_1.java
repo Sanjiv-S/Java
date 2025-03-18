@@ -19,10 +19,8 @@ public class palindrome_1 {
             }
             System.out.print(count);
         }
-        
-    
     public static void main(String args[]){
-        String str="abcbg";
+        String str="abcde";
         check_palindrome(str);
     }
 }
