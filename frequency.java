@@ -1,5 +1,4 @@
 import java.util.HashMap;
-
 public class frequency {
     static void sort(){
         int arr[] ={10,5,4,2};
@@ -12,7 +11,6 @@ public class frequency {
                     arr[i]=arr[j];
                     arr[j]=temp;
                 }
-                
             }
         }
         for(int i:arr){
