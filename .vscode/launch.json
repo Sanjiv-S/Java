@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "prime_number",
+            "request": "launch",
+            "mainClass": "prime_number",
+            "projectName": "java_6903a146"
+        },
+        {
+            "type": "java",
             "name": "ReverseSentence",
             "request": "launch",
             "mainClass": "ReverseSentence",

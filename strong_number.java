@@ -2,7 +2,7 @@ public class strong_number {
     static int calc_fact(int n){
         int value=n;
         for(int i=n-1;i>0;i--){
-            value =value*i;
+            value =value*i; 
         }
         return value;
     }
