@@ -11,11 +11,42 @@ public class rotate_array {
             System.out.print(i+" ");
         }
     }
-    static void rotate_k(int arr[]){
-
+    static void rotate_right(int arr[],int k){
+        int arr1[]=new int[arr.length];
+        int count=0;
+        for(int i=k;i>0;i--){
+            arr1[count]=arr[arr.length-i];
+            count++;
+        }
+        for(int j=0;j<arr.length-k;j++){
+            arr1[count]=arr[j];
+            count++;
+        }
+        for(int i:arr1){
+            System.out.print(i+" ");
+        }
+    }
+    static void rotate_left(int arr[],int k){
+        int arr1[]=new int [arr.length];
+        int count=0;
+        for(int i=k;i<arr.length;i++){
+            arr1[count]=arr[i];
+            count++;
+        }
+        for(int j=0;j<k;j++){
+            arr1[count]=arr[j];
+            count++;
+        }
+        for(int i:arr1){
+            System.out.print(i+" ");
+        }
     }
     public static void main(String args []){
-        int arr[] = {9, 8, 7, 6, 4, 2, 1, 3};
+        int arr[] = {1,2,3,4,5};
         rotate(arr);
+        System.out.println();
+        rotate_right(arr, 3);
+        System.out.println();
+        rotate_left(arr, 1);
     }
 }
