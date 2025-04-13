@@ -1,0 +1,39 @@
+public class Decimal_conversion {
+    static void convert(int n) {
+        int arr[] = new int[100];
+        int i = 0;
+        
+        while (n > 0) {
+            arr[i] = n % 2;
+            n = n / 2;
+            i++;
+        }
+        
+        for (int j = i - 1; j >= 0; j--) {
+            System.out.print(arr[j]); // Fix: Print arr[j] instead of arr[i]
+        }
+    }
+
+    static int gcd(int a, int b) { // Fix: Change void to int
+        if (b == 0) {
+            return a;
+        } else {
+            return gcd(b, a % b); // Fix: Return the recursive result
+        }
+    }
+
+    static void lcm(int a, int b) {
+        int gcd1 = gcd(a, b); // Fix: Use the corrected gcd function
+        int lcm = (a * b) / gcd1;
+        System.out.print(lcm);
+    }
+
+    public static void main(String args[]) {
+        convert(33); // Binary conversion of 33
+        System.out.println(); 
+
+        System.out.println(gcd(36, 18)); // Fix: Print the returned value
+        
+        lcm(30, 14); 
+    }
+}

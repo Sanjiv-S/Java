@@ -8,14 +8,11 @@ public class HexadecimalAddition {
     }
 
     public static String addHexNumbers(String hex1, String hex2) {
-        // Convert both hexadecimal numbers to decimal
         int decimal1 = hexToDecimal(hex1);
         int decimal2 = hexToDecimal(hex2);
 
-        // Perform addition in decimal
         int decimalSum = decimal1 + decimal2;
 
-        // Convert the result back to hexadecimal
         return decimalToHex(decimalSum);
     }
 
@@ -30,15 +27,12 @@ public class HexadecimalAddition {
                 value = hexChar - 'A' + 10;
             } else if (hexChar >= 'a' && hexChar <= 'f') {
                 value = hexChar - 'a' + 10;
-            } else {
-                throw new IllegalArgumentException("Invalid hexadecimal character: " + hexChar);
-            }
-            decimal = decimal * 16 + value;
+            }             decimal = decimal * 16 + value;
         }
         return decimal;
     }
 
-    public static String decimalToHex(int decimal) {
+    public static String decimalToHex(int decimal) {  s
         StringBuilder hex = new StringBuilder();
         while (decimal > 0) {
             int remainder = decimal % 16;
@@ -51,6 +45,5 @@ public class HexadecimalAddition {
             hex.insert(0, hexChar);
             decimal /= 16;
         }
-        return hex.length() > 0 ? hex.toString() : "0"; // Handle case for decimal 0
-    }
+        return hex.length() > 0 ? hex.toString() : "0";     }
 }

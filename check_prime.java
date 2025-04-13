@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class check_prime{
+
 static void check(){
 Scanner sc=new Scanner(System.in);
 System.out.print("Enter the number:");
@@ -41,6 +42,7 @@ odd_sum+=7;
 }
 }
 
+
 static void newseries(int n){
 int even_sum=0;
 int odd_sum=0;
@@ -59,11 +61,49 @@ else{
 System.out.print(odd_sum);
 }
 }
+
+static void words(){
+Scanner sc=new Scanner(System.in);
+char vowels[]={'a','e','i','o','u'};
+String STDIN= sc.nextLine();
+String word[]=STDIN.split(" ");
+for(int i=0;i<word.length;i++){
+char arr[]=word[i].toCharArray();
+for(int j=0;j<arr.length;j++){
+if(j==0){
+if (isVowel(arr[j], vowels)){
+arr[j]='%';
+}
+System.out.print(arr[j]+" ");
+}
+else if(j==1){
+if (!isVowel(arr[j], vowels)){
+arr[j]='#';
+}
+}
+System.out.print(arr[j]);
+}
+System.out.print(" ");
+
+}
+}
+static boolean isVowel(char c, char[] vowels) {
+    for (char vowel : vowels) {
+        if (c == vowel) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
 public static void main(String args[]){
 check();
 System.out.println();
 series(15);
 System.out.println();
 newseries(10);
+System.out.println();
+words();
 }
 }

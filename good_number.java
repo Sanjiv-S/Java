@@ -133,7 +133,7 @@ if(left_sum==right_sum){
 System.out.print(k);
 break;
 }
-else{
+else{ 
 left_sum=0;
 right_sum=0;}
 }

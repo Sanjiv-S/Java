@@ -125,6 +125,10 @@ float total=inter_price+exter_price;
 System.out.print("Total Estimated Cost:"+total+" INR");
 }
 
+static void MPCS(){
+for(int i=0;i<10;i++){
+int input=
+
 public static void main(String args[]){
 int arr[]={7,4,8,2,9};
 int arr1[][]={{0,1,0},{1,1,0},{1,1,1}};

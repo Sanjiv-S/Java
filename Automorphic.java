@@ -15,6 +15,6 @@ public class Automorphic{
 
 }
 	 public static void main(String args[]){
-		System.out.print(isAutomorphic(6));
+		System.out.print(isAutomorphic(6))=[p;
 }
 }

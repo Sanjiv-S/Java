@@ -17,7 +17,7 @@ for(int j=i-1;j>=0;j--){
 		}
 		else{
 			return gcd(b,a%b);
-}
+} 
 	}
 	
 	static void lcm(int a,int b){

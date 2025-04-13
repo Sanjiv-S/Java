@@ -18,6 +18,7 @@ static void unique_val(String str1,String str2){
 		}
 }System.out.print(count);
 }
+static void +
  public static void main(String []args){
 	String str1="abczcabdz";
 	String str2="acza";
