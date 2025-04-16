@@ -16,12 +16,11 @@ public class freq {
             }
         }
          for (Map.Entry<Integer, Integer> e : map.entrySet())
-            System.out.println("Key: " + e.getKey()
-                               + " Value: " + e.getValue());
+            System.out.println("Key: " + e.getKey()+ " Value: " + e.getValue());
     }
 
     public static void main(String args[]){
-        int arr[]={10,23,44,23,23,23,44};
+        int arr[]={10, 20, 20, 10, 10, 20, 5, 20};
         count(arr);
 
     }

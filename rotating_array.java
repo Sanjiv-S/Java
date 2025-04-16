@@ -32,8 +32,6 @@ public class rotating_array {
                 arr[i][col]=prev;
                 prev=curr;
             }
-           
-            
         }
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < l; j++) {
