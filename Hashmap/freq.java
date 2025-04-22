@@ -6,7 +6,7 @@ public class freq {
         int value=1;
         int new_val=0;
         for(int i=0;i<arr.length;i++){
-            if(map.containsKey(arr[i])){
+            if(map.containsKey(arr[i])){    
                 new_val=map.get(arr[i]);
                 map.put(arr[i],new_val+1);
             }
