@@ -19,8 +19,30 @@ public class palindrome_1 {
             }
             System.out.print(count);
         }
+    static String check(String s){
+        int len=s.length();
+        String result="";
+        if(s.length()==1){
+            result=s;
+        }
+        for(int i=0;i<len;i++){
+            for(int j=i+1;j<len;j++){
+                String substring=s.substring(i,j);
+                StringBuilder sb = new StringBuilder(substring);
+                if(substring.equals(sb.reverse().toString())){
+                    if(substring.length()>result.length()){
+                        result=substring;
+                        System.out.print(substring.length());
+                    }
+                }
+            }
+        }
+        return result;
+    }
     public static void main(String args[]){
         String str="abcde";
-        check_palindrome(str);
+        //check_palindrome(str);
+        String s="bb";
+        System.out.print(check(s));
     }
 }

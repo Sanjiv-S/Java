@@ -5,12 +5,11 @@ public class selection {
             int min_ind=i;
             for(int j=i+1;j<n;j++){
                 if(arr[j]<arr[min_ind]){
-                    min_ind=j;
+                   int temp=arr[i];
+                   arr[i]=arr[j];
+                   arr[j]=temp;
                 }
             }
-            int temp=arr[i];
-            arr[i]=arr[min_ind];
-            arr[min_ind]=temp;
         }
         for(int val:arr){
             System.out.print(val+" ");

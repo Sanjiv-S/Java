@@ -6,7 +6,7 @@ public class binarysearch {
             if(arr[mid]==target){
                 return mid;
             }
-            if(target>arr[mid]){
+            else if(target>arr[mid]){
                 low=mid+1;
             }
             else{
@@ -17,7 +17,9 @@ public class binarysearch {
     }
     public static void main(String args[]){
         int arr[]={2,3,4,5,6,7,8,9,34,56,77,88,99,167,174,877,879};
-        int target=4;
+        int target=56;
+        int value='A'-0;
         System.err.println(search(arr,target));
+        System.out.print(value);
     }
 }

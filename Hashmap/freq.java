@@ -19,9 +19,42 @@ public class freq {
             System.out.println("Key: " + e.getKey()+ " Value: " + e.getValue());
     }
 
+    static void calculate_frequency(int arr[]){
+        int  value=1;
+        int existing_value;
+        HashMap<Integer,Integer> map=new HashMap<>();
+        for(int i=0;i<arr.length;i++){
+            if(map.containsKey(arr[i])){
+                existing_value =map.get(arr[i]);
+                map.put(arr[i],existing_value+value);  
+            }
+            else{
+                map.put(arr[i],value);
+            }
+        }
+        for(Map.Entry<Integer,Integer> e:map.entrySet()){
+                System.out.println("key :"+e.getKey()+"count :"+e.getValue());
+            }
+    }
+
+    static void distint_element(int input[],int k){
+        int start=0;
+        int end=k;
+        HashMap<Integer,Integer> map=new HashMap<>();
+        for(int i=0;i<k;i++){
+            for(int j=start;j<end;j++){
+                if()
+
+            }
+        }
+    }
     public static void main(String args[]){
-        int arr[]={10, 20, 20, 10, 10, 20, 5, 20};
+        int arr[]={10, 20, 20, 10, 10, 20, 5,8,7,7,7 ,20};
+        int input[]={1,2,1,3,4,2,3};
+        int k=4;
         count(arr);
+        System.out.println("");
+        calculate_frequency(arr);
 
     }
 }

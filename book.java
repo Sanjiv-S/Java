@@ -1,7 +1,7 @@
 public class book {
     String title;
     float price;
-    book(){
+    public void new_book(){
         title ="Java porgraming";
         System.out.print("Title:"+ " "+title);
         System.out.println();
@@ -10,6 +10,6 @@ public class book {
     }
     public static void main(String args[]){
         book obj=new book();
-        
+        obj.new_book();
     } 
 }

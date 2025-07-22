@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "juspay",
+            "request": "launch",
+            "mainClass": "juspay",
+            "projectName": "java_3ca2398c"
+        },
+        {
+            "type": "java",
+            "name": "recall",
+            "request": "launch",
+            "mainClass": "recall",
+            "projectName": "java_3ca2398c"
+        },
+        {
+            "type": "java",
             "name": "prime_number",
             "request": "launch",
             "mainClass": "prime_number",
