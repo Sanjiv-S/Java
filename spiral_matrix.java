@@ -26,7 +26,9 @@ public class spiral_matrix {
     }}
     static void spiral(){
         int matrix[][]={
-            {1,2,3,9},{4,5,6,4},{7,8,9,0}
+            {1,2,3,9},
+            {4,5,6,4},
+            {7,8,9,0}
         };
         List<Integer> result = new ArrayList<>();
         int top=0;
@@ -57,6 +59,28 @@ public class spiral_matrix {
         }
         System.out.print(result);
     }
+    static void add(){
+        String s="123";
+        String str="457";
+        int i=Integer.parseInt(s);
+        int j=Integer.parseInt(str);
+        int sum=i+j;
+        System.out.print(sum);
+    }
+    static void case_togle(){
+        String s="Hi heLLo";
+        for(int i=0;i<s.length();i++){
+            if(Character.isUpperCase(s.charAt(i))){
+                System.out.print(Character.toLowerCase(s.charAt(i)));
+                System.out.print((char)(s.charAt(i)+32));
+            }
+            else{
+                System.out.print(Character.toUpperCase(s.charAt(i)));
+                System.out.print((char)(s.charAt(i)-32));
+            }
+        }
+
+    }
     public static void main(String args[]){
         // int matrix[][]={
         //     {1,2,3,9},{4,5,6,4},{7,8,9,0}
@@ -68,8 +92,10 @@ public class spiral_matrix {
         //         System.out.print(matrix[i][j]);
         //     }
         // }
-        rotate_clockwise();
-        System.out.println();
-        spiral();
+        // rotate_clockwise();
+        // System.out.println();
+        // spiral();
+        // add();
+        case_togle();
     }
 }

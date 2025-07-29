@@ -106,7 +106,12 @@ for(int j=0;j<i;j++){
 System.out.print("*");
 }
 for(int j=n;j>i;j--){
-System.out.print("  ");
+if(i==n && j==n){
+    System.out.print("*");
+}
+else{
+    System.out.print("  ");
+}
 }
 for(int j=0;j<i;j++){
 System.out.print("*");
@@ -146,6 +151,6 @@ number_pyramid(5);
 System.out.println();
 pascal_triangle(5);
 System.out.println();
-butterfly_pattern(5);
+butterfly_pattern(6);
 }
 }
