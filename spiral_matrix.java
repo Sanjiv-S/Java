@@ -1,5 +1,8 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class spiral_matrix {
     static void rotate_clockwise(){
@@ -81,6 +84,73 @@ public class spiral_matrix {
         }
 
     }
+    static void count_vowels(){
+        String s="Hello $";
+         Set<Character> vowels = new HashSet<>(Arrays.asList(
+            'a','A','e','E','i','I','o','O','u','U'
+        ));
+        Set<Character> spl = new HashSet<>(Arrays.asList('!','@','#','$','%','^','&','*'));
+        int vowel=0;
+        int consonant=0;
+        for(int i=0;i<s.length();i++){
+            if(vowels.contains(s.charAt(i))){
+                vowel++;
+            }
+            else{
+                if(!spl.contains(s.charAt(i))){
+                    consonant++;
+                }
+            }
+        }
+        System.out.println(vowel);
+        System.out.println(consonant);
+    }
+
+    static void fibonacci(int n, int a, int b, int count) {
+    if (count >= n) return;
+
+    System.out.print(a + " ");
+    fibonacci(n, b, a + b, count + 1);
+}
+
+
+    static void printnum(int n,int num){
+        if(num<=n){
+            System.out.println(num);
+            printnum(n,++num);
+        }
+    }
+
+    static boolean check_palindrome(String s,int start_ind,int end_ind){
+        if(s.length()%2==0){
+            if(s.charAt(end_ind)!=s.charAt(start_ind)){
+                return false;
+            }
+            else{
+                if(end_ind>=start_ind){
+                    check_palindrome(s, start_ind+1, end_ind-1);
+                }
+                else{
+                    return true;
+                }
+            }
+    }
+        return false;
+    }
+
+    static int zeroes(int num,int count){ 
+        int last_digit=num%10;
+        if(num>0){
+            if(last_digit==0){
+                return zeroes(num/10,count+1);
+            }else{
+                return zeroes(num/10,count);
+            } 
+        }
+        return count; 
+    }
+
+    
     public static void main(String args[]){
         // int matrix[][]={
         //     {1,2,3,9},{4,5,6,4},{7,8,9,0}
@@ -94,8 +164,17 @@ public class spiral_matrix {
         // }
         // rotate_clockwise();
         // System.out.println();
-        // spiral();
+        // spiral(); 
         // add();
-        case_togle();
+        // case_togle();
+        // count_vowels();
+        
+        int n=5;
+        int num=0;
+        fibonacci(n,0, 1, 0);
+        // System.out.print(fibonnaci(n));
+        printnum(n,num);
+       System.out.println( check_palindrome("hhoohh", n, num));
+       System.out.println(zeroes(1023408010, 0)); 
     }
 }
