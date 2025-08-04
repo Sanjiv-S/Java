@@ -1,6 +1,6 @@
-public class Vehicle {
-    String vehicleType;
-    String brand;
+abstract public class Vehicle {
+    private String vehicleType;
+    private String brand;
     String model;
 
     Vehicle(String vehicleType, String brand, String model) {
@@ -8,10 +8,14 @@ public class Vehicle {
         this.brand = brand;
         this.model = model;
     }
-
-    void Display() {
-        System.out.println("Vehicle Type: " + vehicleType);
-        System.out.println("Brand Name: " + brand);
-        System.out.println("Model Name: " + model);
+    public String getVehicleType() {
+        return vehicleType;
     }
+
+    public String getBrand() {
+        return brand;
+    }
+    abstract void start();
+    abstract void turnoff();
+   
 }

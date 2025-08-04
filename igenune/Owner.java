@@ -11,12 +11,17 @@ public class Owner extends Car {
         this.contactNumber = contactNumber;
         this.licenseNumber = licenseNumber;
     }
-
-   
     void Display() {
-        super.Display();
+        start();
+        System.out.println("Vehicle Type: " + getVehicleType());
+        System.out.println("Brand Name: " + getBrand());
+        System.out.println("Model Name: " + model);
+        System.out.println("Fuel Type: " + getFuelType());
+        System.out.println("Transmission: " + getTransmission());
+        System.out.println("Number of Doors: " + getNumberOfDoors());
         System.out.println("Owner Name: " + ownerName);
         System.out.println("Contact Number: " + contactNumber);
         System.out.println("License Number: " + licenseNumber);
+        turnoff();
     }
 }

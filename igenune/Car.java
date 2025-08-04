@@ -1,8 +1,29 @@
 public class Car extends Vehicle {
-    String fuelType;
-    String transmission;
-    int numberOfDoors;
+    private String fuelType;
+    private String transmission;
+    private int numberOfDoors;
 
+    public String getFuelType() {
+        return fuelType;
+    }
+    public String getTransmission() {
+        return transmission;
+    }
+    public int getNumberOfDoors() {
+        return numberOfDoors;
+    }
+    public void start(){
+        System.out.print("Start with key");
+    }
+    public void turnoff(){
+        System.out.println("Turn off the Vechile");
+    }
+    interface Drivable{
+        void move();
+        static void fuelType(){
+            System.out.print("Petrol");
+        }
+    }
     Car(String vehicleType, String brand, String model,
         String fuelType, String transmission, int numberOfDoors) {
         super(vehicleType, brand, model);
@@ -11,11 +32,7 @@ public class Car extends Vehicle {
         this.numberOfDoors = numberOfDoors;
     }
 
-   
-    void Display() {
-        super.Display();
-        System.out.println("Fuel Type: " + fuelType);
-        System.out.println("Transmission: " + transmission);
-        System.out.println("Number of Doors: " + numberOfDoors);
-    }
+  
+
+  
 }
