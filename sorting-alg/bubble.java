@@ -1,4 +1,4 @@
-public class bubble {
+  public class bubble {
     static void sort(int arr[]){
         int n=arr.length;
         for(int i=0;i<n;i++){
