@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main {
     static void stack(){
         Stack s=new Stack(3);
@@ -76,26 +77,34 @@ public class Main {
         }
         bottomtop.display();
         }
-    static void sort(){
-        
+    static void sort(Scanner sc){
+        System.out.println("Enter the Size of the Stack:");
+        int size=sc.nextInt();
+        Stack s=new Stack(size);
+        Stack s1=new Stack(size);
+        Stack output=new Stack(size*2);
+
+    
     }
     public static void main(String[] args) {
-        Stack s=new Stack(5);
-        Stack s1=new Stack(5);
-        Stack output=new Stack(10);
-        Stack bottomtop=new Stack(10);
-        s.push(2);
-        s.push(4);
-        s.push(6);
-        s.push(8);
-        s.push(10);
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        Stack s=new Stack(size);
+        Stack s1=new Stack(size);
+        Stack output=new Stack(size*2);
+        Stack bottomtop=new Stack(size*2);
+        System.out.println("Enter the value for the Stack:");
+        for(int i=0;i<size;i++){
+            int v1=sc.nextInt();
+            s.push(v1);
+        }
         System.out.println("Stack 1");
         s.display();
-        s1.push(1);
-        s1.push(3);
-        s1.push(5);
-        s1.push(7);
-        s1.push(9);
+        System.out.println("Enter the value for the Stack:");
+        for(int i=0;i<size;i++){
+            int v1=sc.nextInt();
+            s1.push(v1);
+        }
         System.out.println("Stack 2");
         s1.display();
         while(!s.isEmpty() && !s1.isEmpty()){
@@ -117,8 +126,8 @@ public class Main {
         }
         bottomtop.display();
         System.out.println();
-        stack();
-        System.out.println();
-        alternateStack();
+    //     stack();
+    //     System.out.println();
+    //     alternateStack();
     }
 }

@@ -104,7 +104,23 @@ public class linkedlist {
         }
         newNode.next=head;
         head=newNode;
-
+    }
+    public void deletebykey(int data){
+        Node current=head;
+        Node prev=null;
+        if(head.data==data){
+            head=head.next;
+            return;
+        }
+        while(current.next!=null ){
+            if(current.data ==data){
+                prev.next=current.next;
+                return;
+            }
+            prev=current;
+            current=current.next;
+        }
+        prev.next=null;
     }
     public static void main(String[] args){
         linkedlist list=new linkedlist();
@@ -114,6 +130,12 @@ public class linkedlist {
         list.insertAtEnd(4);
         printList(list);
         list.deleteAtEnd();
+        printList(list);
+        list.insertAtStart(0);
+        printList(list);
+        list.deletebykey(2);
+        printList(list);
+        list.insertAtEnd(4);
         printList(list);
     }
 }
