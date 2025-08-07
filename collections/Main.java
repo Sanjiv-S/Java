@@ -77,7 +77,7 @@ public class Main {
         bottomtop.display();
         }
     static void sort(){
-
+        
     }
     public static void main(String[] args) {
         Stack s=new Stack(5);
