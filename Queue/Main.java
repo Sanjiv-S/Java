@@ -96,14 +96,90 @@ public class Main {
         }
         output.Display();
     }
+
+    static void reverseK(Scanner sc,int k,int size){
+        Queue in1 =new Queue(size);
+        Queue in2=new Queue(size);
+        Stack st =new Stack(size);
+        int arr[]=new int[k];
+        for(int i=0;i<size;i++){
+            int data=sc.nextInt();
+            in1.enqueue(data);
+        }
+        for(int i=k-1;i>=0;i--){
+            st.push(in1.pole());
+            }
+        for(int i=0;i<k;i++){
+            in2.enqueue(st.pop());
+            }
+        while(!in1.isEmpty()){
+            in2.enqueue(in1.pole());
+        }
+        in2.Display();
+    }
+
+    static void reverseString(Scanner sc) {
+        sc.nextLine(); 
+        System.out.println("Enter the String:");
+        String input = sc.nextLine();
+
+        char[] chars = input.toCharArray(); 
+        Stack st = new Stack(chars.length); 
+
+        for (char c : chars) {
+            st.pushString(String.valueOf(c));
+        }
+        System.out.print("Reversed String: ");
+        while (!st.isEmptyString()) {
+            System.out.print(st.popString());
+        }
+        System.out.println();
+}
+    static void nonRepeating(Scanner sc,int size){
+        Stack st=new Stack(size);
+        Queue qu=new Queue(size);
+        String input=sc.nextLine();
+        char[] chars=input.toCharArray();
+        888
+        st.pushString(input);
+    }
+
+    static void interLeave(Scanner sc,int size){
+        Queue in1 =new Queue(size);
+        Queue in2=new Queue(size);
+        Queue output=new Queue(size);
+        for(int i=0;i<size;i++){
+            int data=sc.nextInt();
+            in1.enqueue(data);
+        }
+        for(int i=0;i<size/2;i++){
+            in2.enqueue(in1.pole());
+        }
+        for(int i=1;i<=size;i++){
+            if(i%2==0){
+                output.enqueue(in1.pole());
+                
+            }
+            else{
+                output.enqueue(in2.pole());
+            }
+        }
+        output.Display();
+    }
+
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter the Size of the Queue-1:");
         int size=sc.nextInt();
         System.out.print("Enter the Size of the Queue-2:");
         int size1=sc.nextInt();
+        System.out.print("Enter the Value of K:");
+        int k=sc.nextInt();
         // enqueuePrime(sc,size);
         // enqueueSum(sc, size, size1);
-        twoSum(sc, size, size1, 11);
+        // twoSum(sc, size, size1, 11);
+        // reverseK(sc, k, size);
+        // interLeave(sc,size);
+        reverseString(sc);
     }
 }
