@@ -140,7 +140,6 @@ public class Main {
         Queue qu=new Queue(size);
         String input=sc.nextLine();
         char[] chars=input.toCharArray();
-        888
         st.pushString(input);
     }
 

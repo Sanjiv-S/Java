@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class linkedlist {
     // Node head;
     // static class Node{
@@ -73,6 +75,7 @@ public class linkedlist {
             this.data=data;
         }
     }
+
     public void insertAtEnd(int data){
         Node newNode=new Node(data);
         if(head==null){
@@ -85,6 +88,7 @@ public class linkedlist {
         }
         current.next=newNode;
     }
+
     public void deleteAtEnd(){
         if(head==null){
             return;
@@ -97,6 +101,7 @@ public class linkedlist {
         }
         prev.next=null;
     }
+
     public void insertAtStart(int data){
         Node newNode=new Node(data);
         if(head==null){
@@ -105,6 +110,28 @@ public class linkedlist {
         newNode.next=head;
         head=newNode;
     }
+
+    public void insertByKey(int data,int data1){
+        Node newNode=new Node(data);
+        
+        if(head==null){
+            head=newNode;
+            return;
+        }
+        Node current=head;
+        while(current.next!=null){
+            if(current.data==data1){
+                newNode.next=current.next;
+                current.next=newNode;
+                return;
+            }
+            else{
+                current=current.next;
+            }
+        }   
+    System.out.println("Key " + data1 + " not found.");
+    }
+
     public void deletebykey(int data){
         Node current=head;
         Node prev=null;
@@ -122,20 +149,77 @@ public class linkedlist {
         }
         prev.next=null;
     }
+
+    public void deleteByIndex(int index) {
+        if (head == null) {
+            System.out.println("List is empty.");
+            return;
+        }
+        if (index == 0) {
+            head = head.next;
+            return;
+        }
+        Node current = head;
+        Node prev = null;
+
+        for (int i = 0; i < index; i++) {
+            prev = current;
+            current = current.next;
+            if (current == null) {
+                System.out.println("Index out of bounds.");
+                return;
+            }
+        }
+        prev.next = current.next;
+}
+
+    public void insertAtMid(int data,int index){
+        Node newNode=new Node(data);
+        if(head==null){
+            head=newNode;
+            return;
+        }
+        Node current=head;
+        for(int i=0;i<index;i++){
+            current=current.next;
+        }
+        newNode.next=current.next;
+        current.next=newNode;
+    }
+
+    static void input(Scanner sc,linkedlist list,int size){
+        System.out.println(".Enter the value of the LinkedList:");
+        for(int i=0;i<size;i++){
+            int data=sc.nextInt();
+            list.insertAtEnd(data);
+        }
+    }
+
+    public int sum(linkedlist list,int size){
+        Node current=head;
+        int sum=0;
+        while(current.next!=null){
+            sum+=current.data;
+            current=current.next;
+        }
+        sum+=current.data;
+        return sum;
+    }
+
     public static void main(String[] args){
         linkedlist list=new linkedlist();
-        list.insertAtEnd(1);
-        list.insertAtEnd(2);
-        list.insertAtEnd(3);
-        list.insertAtEnd(4);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Size of the List:");
+        int size=sc.nextInt();
+        input(sc,list,size);
+        list.insertAtStart(5);
         printList(list);
-        list.deleteAtEnd();
+        list.insertAtEnd(50);
         printList(list);
-        list.insertAtStart(0);
+        list.deleteByIndex(2);
         printList(list);
-        list.deletebykey(2);
+        list.insertByKey(35, 30);
         printList(list);
-        list.insertAtEnd(4);
-        printList(list);
+        System.out.println("Sum of All the Elements in the List: "+list.sum(list,size));
     }
 }
