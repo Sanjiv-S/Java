@@ -45,9 +45,11 @@ public class DoublyLinkedList {
         if(head==null&&index==0){
             head=newNode;
             tail=newNode;
+            return;
         }
         else if(index<0){
             System.out.println("Invalid Index");
+            return;
         }
         Node currNode=head;
         for(int i=0;i<=index;i++){ 
@@ -62,6 +64,28 @@ public class DoublyLinkedList {
             }
         }
     }
+
+    public void deleteAtStart(){
+        if(head==null){
+            System.out.println("The List is Empty");
+            return;
+        }
+        head.next.prev=null;
+        head=head.next;
+    }
+
+    public void deleteAtEnd(){
+        if(tail==null){
+            System.out.println("The List is Empty");
+            return;
+        }
+        tail.prev.next=null;
+        tail.prev=null;
+    }
+    public void deleteByIndex(){
+        
+    }
+
     public void printList(DoublyLinkedList list){
             Node currnode =head;
             System.out.print("Linked List:");
@@ -79,6 +103,10 @@ public class DoublyLinkedList {
         list.insertAtEnd(20);
         list.printList(list);
         list.insertAtMid(12, 2);
+        list.printList(list);
+        list.deleteAtStart();
+        list.printList(list);
+        list.deleteAtEnd();
         list.printList(list);
 
     }
