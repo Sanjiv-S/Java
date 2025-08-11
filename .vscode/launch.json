@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "palindrom",
+            "request": "launch",
+            "mainClass": "palindrom",
+            "projectName": "java_3ca2398c"
+        },
+        {
+            "type": "java",
             "name": "juspay",
             "request": "launch",
             "mainClass": "juspay",
