@@ -1,5 +1,8 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Scanner;
 public class freq {
@@ -103,7 +106,56 @@ public class freq {
 
         System.out.println("Is an Anagram");
     }
+    
+    static void findAnagram(){
+        String arr[]={"eat","tea","tan","ate","nat","bat"}; 
+        HashMap<String,LinkedHashSet<String>> map=new HashMap<>();
+        for(String s:arr){
+            char[] charArray = s.toCharArray();
+            Arrays.sort(charArray);
+            String sortedString = new String(charArray);
+            if(map.containsKey(sortedString)){
+                 map.get(sortedString).add(s);
+            } 
+            else {
+            LinkedHashSet<String> set = new LinkedHashSet<>();
+            set.add(s);
+            map.put(sortedString, set);
+        }
+    }
+    for (LinkedHashSet<String> group : map.values()) {
+        System.out.println(group);
+    }
+        // for(int i=0;i<arr.length;i++){
+        //     for(int j=1;j<arr.length;j++){
+        //         char[] charArray = arr[i].toCharArray();
+        //         Arrays.sort(charArray);
+        //         String sortedString = new String(charArray);
+        //         char[] charArray1 =arr[j].toCharArray();
+        //         Arrays.sort(charArray1);
+        //         String sortedString1 = new String(charArray);
+        //         if(sortedString.equals(sortedString1)){
+        //             set.add(arr[i]);
+        //             set.add(arr[j]);
+        //         }
+        //     }
+        //     System.out.print(set);
+        //     System.out.println();
+        // }
 
+    //     for(int i=0;i<arr.length;i++){
+    //         int count=0;
+    //         for(char ch:arr[i].toCharArray()){
+    //             map.put(ch,map.getOrDefault(ch, 0)+1);
+    //             if(i>0 && map.containsKey(ch)){
+    //                 count++;
+    //             }
+    //         }
+    //         if(i==0 || count==arr[i].length()){
+    //                 System.out.print(arr[i]+" ");
+    //             }
+    // }
+    }
 
 
     public static void main(String args[]){
@@ -115,6 +167,7 @@ public class freq {
         // calculate_frequency(arr);
         // distint_element(); 
         // countword();
-        anagram();
+        // anagram();
+        findAnagram();
     }
 }
